@@ -1,11 +1,11 @@
-import { Button, Container } from '@mui/joy'
+
+import { Container } from '@mui/material'
 import React from 'react'
 
 const About = () => {
   return (
     <Container>
       <h1>About</h1>
-      <Button >Primary</Button>
     </Container>
   )
 }
