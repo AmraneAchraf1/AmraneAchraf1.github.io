@@ -1,11 +1,16 @@
 .appBar{
     width: 100%;
-    padding: 20px 0;
+    padding: 12px 0;
     height: 60px;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
 
 .nav {
+    padding-top: 6px;
     width: 100%;
     height: 100%;
 }
@@ -24,10 +29,6 @@
 
 }
 
-.nav ul a.active li {
-    color: var(--main-color);
-    font-weight: 500;
-}
 
 .nav ul li {
     font-size: 1.2rem;
@@ -35,4 +36,139 @@
     font-family: 'poppins', sans-serif;
     color: #fff;
     cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.nav ul a:hover li{
+    color: var(--main-color);
+    font-weight: 500;
+    text-shadow:   0px 0px 12px #64646453;
+
+}
+.nav ul a.active li {
+    color: var(--main-color);
+    font-weight: 500;
+    text-shadow:   0px 6px 14px #ffffff2c, 0px -6px 14px #ffffff2c , -6px 0 14px #ffffff2c , 6px 0 14px #ffffff2c;
+    filter: drop-shadow(0px 0px 16px #ffffff0f);
+    -webkit-filter: drop-shadow(0px 0px 16px #ffffff0f);
+    transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+}
+
+.list{
+    height: 100%;
+    position: relative;
+ 
+}
+.list_items{
+    position: absolute;
+    top: 50px;
+    right: -234px;
+    width: 160px;
+    padding: 8px 16px;
+    background: #1c1c1c;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 0px solid #62b250d4;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: .6s ease-in-out;
+    opacity: 0.01;
+    -webkit-transition: .6s ease-in-out;
+    -moz-transition: .6s ease-in-out;
+    -ms-transition: .6s ease-in-out;
+    -o-transition: .6s ease-in-out;
+}
+
+.list_items.is_open{
+    position: absolute;
+    top: 50px;
+    right: 9px;
+    width: 160px;
+    padding: 8px 16px;
+    background: #1c1c1c79;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0.5px solid #62b25035;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    opacity: 1;
+    transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+}
+
+.list_items ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.list_items ul li {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+.list_items ul a.active li {
+    color: var(--main-color);
+    font-weight: 500;
+    text-shadow:   0px 6px 14px #ffffff2c, 0px -6px 14px #ffffff2c , -6px 0 14px #ffffff2c , 6px 0 14px #ffffff2c;
+    filter: drop-shadow(0px 0px 16px #ffffff0f);
+    -webkit-filter: drop-shadow(0px 0px 16px #ffffff0f);
+    transform: translateX(4px);
+    -webkit-transform: translateX(4px);
+    -moz-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    -o-transform: translateX(4px);
+}
+
+.list_items ul a:hover li{
+    transform: translateX(4px);
+    -webkit-transform: translateX(4px);
+    -moz-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    -o-transform: translateX(4px);
+} 
+/* Small screen */
+@media (max-width: 768px) {
+    .appBar{
+        justify-content: flex-end;
+        align-items: center;
+        padding: 8px;
+    }
+    .nav{
+        display: none;
+        
+    }
+    
+}
+/* lg screen */
+@media (min-width: 768px) {
+    .list{
+        display: none;
+    }
+
 }

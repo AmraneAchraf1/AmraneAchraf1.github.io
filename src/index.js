@@ -13,7 +13,7 @@ import "./index.css";
 //pages
 import Main from "./layout/Main";
 import About from "./pages/About";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import { CssBaseline } from "@mui/material";
 import Projects from "./pages/Projects";
 // Material UI theme configuration 
@@ -41,7 +41,7 @@ const theme = createTheme(
       MuiButton: {
         styleOverrides: {
           root: {
-            borderRadius: "16px",
+            borderRadius: "32px",
             color : "#FFFFFF",
           },
         },
