@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import me from "./me.svg"
 const Home = () => {
   return (
-    <Box className={styles.container} >
+    <Box className={styles.parent} >
 
       <Box className={styles.left} >
         <div className={styles.one}> 
@@ -36,7 +36,9 @@ const Home = () => {
 
       <Box className={styles.right} >
         <div className={styles.img} >
-        <img src={me} alt='me' />
+        
+        <img src={me} alt='me' onLoad={(e) => console.log(e) } />
+       
         </div>
       </Box>
 
