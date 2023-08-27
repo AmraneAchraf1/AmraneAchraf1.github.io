@@ -9,7 +9,9 @@ const Main = () => {
   const theme = useTheme()
   console.log(theme);
   return (
-    <Container maxWidth="xl" >
+    <Container maxWidth="xl" sx={{
+      paddingBottom:"10px",
+    }} >
     <AppBar />
 
     <Outlet />
