@@ -2,7 +2,14 @@ import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import styles from "./styles.module.css";
 import me from "./me.svg";
+import ReadMoreReact from "read-more-react/dist/components/ReadMoreReact";
+import { useMediaQuery } from 'react-responsive'
+
+
 const Home = () => {
+
+  const isMobile = useMediaQuery({ query: `(max-width: 600px)` })
+  
   return (
     <>
       <Box className={styles.parent}>
@@ -21,12 +28,18 @@ const Home = () => {
             <img src={me} alt="me" />
           </div>
 
-          <Typography>
-            Experienced full-stack developer specializing in Laravel, React,
-            PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.
-            Committed to crafting innovative, user-centric applications for
-            optimal client and user satisfaction.
-          </Typography>
+          
+            {
+              isMobile ?  <ReadMoreReact
+           readMoreText="...read more"  
+          min={75}
+          ideal={80}
+          max={300}
+          text={"Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction."}
+		/> : <Typography>Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction.
+            </Typography>
+            }
+          
 
           <div className={styles.btns}>
             <Button variant="contained"> Contact Me </Button>

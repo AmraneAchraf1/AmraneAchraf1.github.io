@@ -30,20 +30,19 @@ h6 {
     padding: 0 !important;
 }
 
+
 html,
 body,
 #root,
 .app {
-    height: 100%;
-    width: 100%;
     scroll-behavior: smooth;
-
-}
+        
+}   
 
 body {
     background: #1c1c1c;
     background: radial-gradient(circle, #1c1c1c 0%, rgb(26, 26, 26) 60%);
-
+    
 }
 
 /* 
@@ -80,3 +79,15 @@ body {
 }
 
 /* End Scroll Bar ---------*/
+
+.read-more-button{
+    color: #fff;
+    display: inline;
+    cursor: pointer;
+    font-weight: 400;
+    text-decoration: underline solid #ababab93 0.3px;
+}
+.display-text-group span{
+    color: #ACACAC;
+    font-size: 12px;
+}
