@@ -168,7 +168,7 @@
     -o-transform: translateX(4px);
 } 
 /* Small screen */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .appBar{
         justify-content: flex-end;
         align-items: center;
