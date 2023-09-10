@@ -1,7 +1,6 @@
 .parent {
     width: 100%;
     height: calc(100vh - 65px);
-    background-color: #ffffff0d;
     display: flex;
     justify-content: center;
     align-items: center;

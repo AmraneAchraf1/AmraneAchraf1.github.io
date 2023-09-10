@@ -4,12 +4,15 @@ import styles from "./styles.module.css";
 import me from "./me.svg";
 import ReadMoreReact from "read-more-react/dist/components/ReadMoreReact";
 import { useMediaQuery } from 'react-responsive'
+import { useDispatch } from "react-redux";
+import { openModal } from "../../store/reducer/ui/ModalSlice";
 
 
 const Home = () => {
 
   const isMobile = useMediaQuery({ query: `(max-width: 600px)` })
-  
+  const dispatch = useDispatch();
+
   return (
     <>
       <Box className={styles.parent}>
@@ -36,20 +39,22 @@ const Home = () => {
           ideal={80}
           max={300}
           text={"Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction."}
-		/> : <Typography>Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction.
+		/> : <Typography> Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction.
             </Typography>
             }
           
 
           <div className={styles.btns}>
-            <Button variant="contained"> Contact Me </Button>
+            <Button variant="contained"
+            onClick={() => dispatch(openModal({componentName : "ContactMe"}))}
+            > Contact Me </Button>
             <Button variant="outlined"> Download CV </Button>
           </div>
         </Box>
 
         <Box className={styles.right}>
           <div className={styles.img}>
-            <img src={me} alt="me" onLoad={(e) => console.log(e)} />
+            <img src={me} alt="me"  />
           </div>
         </Box>
       </Box>
