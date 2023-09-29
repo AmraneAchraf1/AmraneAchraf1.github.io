@@ -54,7 +54,7 @@ const theme = createTheme(
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: <Main  />,
     children: [
       {
         path: "/",

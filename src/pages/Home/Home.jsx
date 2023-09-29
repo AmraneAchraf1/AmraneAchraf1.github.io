@@ -3,14 +3,12 @@ import React from "react";
 import styles from "./styles.module.css";
 import me from "./me.svg";
 import ReadMoreReact from "read-more-react/dist/components/ReadMoreReact";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 import { useDispatch } from "react-redux";
 import { openModal } from "../../store/reducer/ui/ModalSlice";
-
-
+import frCv from "../../assets/cv/fr.pdf"
 const Home = () => {
-
-  const isMobile = useMediaQuery({ query: `(max-width: 600px)` })
+  const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
   const dispatch = useDispatch();
 
   return (
@@ -31,46 +29,59 @@ const Home = () => {
             <img src={me} alt="me" />
           </div>
 
-          
-            {
-              isMobile ?  <ReadMoreReact
-           readMoreText="...read more"  
-          min={75}
-          ideal={80}
-          max={300}
-          text={"Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction."}
-		/> : <Typography> Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction.
+          {isMobile ? (
+            <ReadMoreReact
+              readMoreText="...read more"
+              min={75}
+              ideal={80}
+              max={300}
+              text={
+                "Experienced full-stack developer specializing in Laravel, React,PHP, JavaScript, and Python. Skilled in Agile and DevOps practices.Committed to crafting innovative, user-centric applications for optimal client and user satisfaction."
+              }
+            />
+          ) : (
+            <Typography>
+   
+              Experienced full-stack developer specializing in Laravel,
+              React,PHP, JavaScript, and Python. Skilled in Agile and DevOps
+              practices.Committed to crafting innovative, user-centric
+              applications for optimal client and user satisfaction.
             </Typography>
-            }
-          
+          )}
 
           <div className={styles.btns}>
-            <Button variant="contained"
-            onClick={() => dispatch(openModal({componentName : "ContactMe"}))}
-            > Contact Me </Button>
-            <Button variant="outlined"> Download CV </Button>
+            <Button
+              variant="contained"
+              onClick={() =>
+                dispatch(openModal({ componentName: "ContactMe" }))
+              }
+            >
+              
+              Contact Me
+            </Button>
+            <Button variant="outlined" download="Amrane Achraf" href={frCv} target="_blank" > Download CV </Button>
           </div>
         </Box>
 
         <Box className={styles.right}>
           <div className={styles.img}>
-            <img src={me} alt="me"  />
+            <img src={me} alt="me" />
           </div>
         </Box>
       </Box>
 
       <Box className={styles.box}>
-          <div className={styles.visitors} >
-              <h1> 123 </h1>
-              <span className={styles.divider} > </span>
-              <h2> Visitors </h2>
-          </div>
+        <div className={styles.visitors}>
+          <h1> Bac + 2 </h1>
+          <span className={styles.divider}> </span>
+          <h2> Education </h2>
+        </div>
 
-          <div className={styles.projects} >
-              <h1> 99 </h1>
-              <span className={styles.divider} > </span>
-              <h2> Projects </h2>
-          </div>
+        <div className={styles.projects}>
+          <h1> 03 </h1>
+          <span className={styles.divider}> </span>
+          <h2> Projects </h2>
+        </div>
       </Box>
 
       <Box
@@ -78,9 +89,7 @@ const Home = () => {
           width: "100%",
           height: "100vh",
         }}
-      >
-        
-      </Box>
+      ></Box>
     </>
   );
 };
