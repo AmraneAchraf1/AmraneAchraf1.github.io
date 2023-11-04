@@ -6,7 +6,10 @@ import ReadMoreReact from "read-more-react/dist/components/ReadMoreReact";
 import { useMediaQuery } from "react-responsive";
 import { useDispatch } from "react-redux";
 import { openModal } from "../../store/reducer/ui/ModalSlice";
-import frCv from "../../assets/cv/fr.pdf"
+import frCv from "../../assets/cv/fr.png";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import maflotte from "../../assets/projects/maflotte/mockup.png";
+import Grid from "@mui/material/Grid";
 const Home = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
   const dispatch = useDispatch();
@@ -41,7 +44,6 @@ const Home = () => {
             />
           ) : (
             <Typography>
-   
               Experienced full-stack developer specializing in Laravel,
               React,PHP, JavaScript, and Python. Skilled in Agile and DevOps
               practices.Committed to crafting innovative, user-centric
@@ -56,10 +58,17 @@ const Home = () => {
                 dispatch(openModal({ componentName: "ContactMe" }))
               }
             >
-              
               Contact Me
             </Button>
-            <Button variant="outlined" download="Amrane Achraf" href={frCv} target="_blank" > Download CV </Button>
+            <Button
+              variant="outlined"
+              download="Amrane Achraf"
+              href={frCv}
+              target="_blank"
+            >
+              
+              Download CV
+            </Button>
           </div>
         </Box>
 
@@ -84,12 +93,53 @@ const Home = () => {
         </div>
       </Box>
 
-      <Box
-        sx={{
-          width: "100%",
-          height: "100vh",
-        }}
-      ></Box>
+      <Box className={styles.last_projects}>
+        <Typography variant="h2" className={styles.section_title}>
+          
+          Last Projects
+        </Typography>
+
+        <Grid
+          container
+          spacing={{ xs: 2, md: 8 }}
+          columns={{ xs: 2, sm: 4, md:6,  lg:12 }}
+          
+        >
+          <Grid item xs={2} sm={4} md={3}  lg={4} sx={{
+            display: 'flex',
+            justifyContent: 'center'
+          
+          }} >
+            <ProjectCard
+              image={maflotte}
+              title="Ma Flotte"
+              description="Ma Flotte is a web application that allows you to manage your fleet of vehicles and drivers."
+            />
+          </Grid>
+          <Grid item xs={2} sm={4} md={3}  lg={4} sx={{
+            display: 'flex',
+            justifyContent: 'center'
+          
+          }} >
+            <ProjectCard
+              image={maflotte}
+              title="Ma Flotte"
+              description="Ma Flotte is a web application that allows you to manage your fleet of vehicles and drivers."
+            />
+          </Grid>
+          <Grid item xs={2} sm={4} md={3}  lg={4} sx={{
+            display: 'flex',
+            justifyContent: 'center'
+          
+          }} >
+            <ProjectCard
+              image={maflotte}
+              title="Ma Flotte"
+              description="Ma Flotte is a web application that allows you to manage your fleet of vehicles and drivers."
+            />
+          </Grid>
+        </Grid>
+      </Box>
     </>
   );
 };

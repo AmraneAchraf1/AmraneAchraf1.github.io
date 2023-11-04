@@ -474,3 +474,15 @@
         width: 140px;
     }
 }
+
+.last_projects {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.section_title{
+    margin: 32px 0 !important;
+    text-align: center;
+    font-weight: 600 !important;
+    color: #fff;
+}
