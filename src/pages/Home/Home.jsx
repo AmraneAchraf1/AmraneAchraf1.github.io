@@ -10,9 +10,14 @@ import frCv from "../../assets/cv/fr.png";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import maflotte from "../../assets/projects/maflotte/mockup.png";
 import Grid from "@mui/material/Grid";
+
 const Home = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
   const dispatch = useDispatch();
+
+  
+
+
 
   return (
     <>
@@ -81,7 +86,7 @@ const Home = () => {
 
       <Box className={styles.box}>
         <div className={styles.visitors}>
-          <h1> Bac + 2 </h1>
+          <h1> Bac + 3 </h1>
           <span className={styles.divider}> </span>
           <h2> Education </h2>
         </div>
@@ -94,7 +99,7 @@ const Home = () => {
       </Box>
 
       <Box className={styles.last_projects}>
-        <Typography variant="h2" className={styles.section_title}>
+        <Typography variant="h4" className={styles.section_title}>
           
           Last Projects
         </Typography>

@@ -4,22 +4,23 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-
+import styles from './styles.module.css';
 const ProjectCard = ({image, title, description}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-    <CardActionArea>
+
+    <CardActionArea
+      className={styles.cardActionArea}
+     >
+    <Card className={styles.card}>
       <CardMedia
         component="img"
-        sx={{
-            width: '100%',
-            height: '200px',
-            objectFit: 'cover'
-        }}
+        className={styles.cardMedia}
         image={image}
         alt={title}
       />
-      <CardContent>
+      <CardContent
+        className={styles.cardContent}
+      >
         <Typography gutterBottom variant="h5" component="div">
             {title}
         </Typography>
@@ -27,8 +28,8 @@ const ProjectCard = ({image, title, description}) => {
             {description}
         </Typography>
       </CardContent>
-    </CardActionArea>
   </Card>
+    </CardActionArea>
   )
 }
 

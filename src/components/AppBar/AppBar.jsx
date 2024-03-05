@@ -16,6 +16,20 @@ const AppBar = () => {
     
   // });
 
+  // window scroll position
+  // const [scroll, setScroll] = useState(0);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScroll(window.scrollY);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [scroll]);
+
+  // console.log(scroll);
+
   return (
     <header
         className={styles.appBar}
@@ -59,6 +73,8 @@ const AppBar = () => {
       </div>
     </header>
   );
+
+  
 };
 
 export default AppBar;
