@@ -88,8 +88,8 @@
     top: 50px;
     right: -234px;
     width: 160px;
-    padding: 8px 16px;
-    background: transparent !important;
+    padding: 16px;
+    background: #1c1c1c71 !important;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
 
@@ -111,8 +111,8 @@
     top: 50px;
     right: 9px;
     width: 160px;
-    padding: 8px 16px;
-    background: #1c1c1c79;
+    padding:  8px;
+    background: #1c1c1cae;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -150,14 +150,19 @@
 .list_items ul a.active li {
     color: var(--main-color);
     font-weight: 500;
-    text-shadow:   0px 6px 14px #ffffff2c, 0px -6px 14px #ffffff2c , -6px 0 14px #ffffff2c , 6px 0 14px #ffffff2c;
-    filter: drop-shadow(0px 0px 16px #ffffff0f);
-    -webkit-filter: drop-shadow(0px 0px 16px #ffffff0f);
-    transform: translateX(4px);
-    -webkit-transform: translateX(4px);
-    -moz-transform: translateX(4px);
-    -ms-transform: translateX(4px);
-    -o-transform: translateX(4px);
+    /* text-shadow:   0px 6px 10px #ffffff11, 0px -6px 10px #ffffff2c , -6px 0 10px #ffffff2c , 6px 0 10px #ffffff10;
+    filter: drop-shadow(0px 0px 4px #ffffff0f);
+    -webkit-filter: drop-shadow(0px 0px 4px #ffffff0f); */
+    background: #acacac36;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.261);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 4px 8px;
 }
 
 .list_items ul a:hover li{
@@ -176,7 +181,6 @@
     }
     .nav{
         display: none;
-        
     }
     
 }
@@ -185,5 +189,4 @@
     .list{
         display: none;
     }
-
 }

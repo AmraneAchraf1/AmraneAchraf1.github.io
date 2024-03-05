@@ -40,8 +40,11 @@ body,
 }   
 
 body {
-    background: #1c1c1c;
-    background: radial-gradient(circle, #1c1c1c 0%, rgb(26, 26, 26) 60%);
+    /* background: #323232; */
+    /* background: radial-gradient(circle, #1c1c1c 0%, rgb(26, 26, 26) 75%); */
+    background: #f4f4f4 ;
+
+
     
 }
 
